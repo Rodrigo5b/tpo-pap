@@ -1,0 +1,150 @@
+@import url(../estilos/root.css);
+/*Contenido de la pagina*/
+body{
+    background: var(--background-primario);
+}
+h1{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--background-secundario);
+    font-size: 2.3rem;
+    color:#ffffff;
+    height: 4rem;
+}
+    /* Formulario */
+h2{
+    padding: 15px 0;
+    margin-top: 2rem;
+    background-color: #f37445;
+    text-align: center;
+    font-style: italic;
+    font-size: 32px;
+    margin-bottom: 45px;
+}
+#perro { 
+    width: 100%;
+}
+#perro>img{
+    width: 40vw;
+    height:100%
+}
+    /* Formulario */
+ .contenedorform{
+    display: flex;
+    justify-content: space-between;
+    padding: 55px 65px;
+    gap: 130px;
+ }   
+.formulario {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #f9f0d4;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    border-radius: 2rem;
+    padding-bottom: 60px;
+}
+.bg-alter > .contenido > .contenedorform > .formulario {
+    background-color: #222;
+}
+.bg-alter > .contenido > .contenedorform > .formulario > label {
+    color: #ffffff;
+}
+.bg-alter > .contenido > .contenedorform > .formulario > h2 {
+    background: var(--background-alter);
+}
+
+form > label {
+    font-size: 24px;
+    margin: 0 20px;
+    color: #000000;
+}
+input, form > textarea  {
+    background-color: #B0CCDC;
+    border-radius: 1rem;
+    font-size: 20px;
+    margin: 21px 20px;
+    padding: 24px 0;
+    padding-left: 15px;
+    border: none;
+}
+[type="submit"] {
+    cursor: pointer;
+}
+    
+form > textarea {
+    color: #ffffff;
+    resize: vertical;
+}
+    
+input::placeholder , textarea::placeholder{
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.warnings {
+    display: flex;
+    justify-content: space-around;
+    width: auto;
+    text-align:center;
+    margin:auto;
+    color: #f37445;
+}
+
+@media(max-width:1280px){
+    .formulario{
+        border-radius: 15px;
+        width: 100%;
+        padding: 36px 0px;
+    }
+    .contenedorform{
+        padding: 55px 65px;
+        gap: 98px;
+     }   
+     h2{
+        font-size: 26px;
+     }
+     form > label{
+        font-size: 20px;
+        margin: 0px 12px;
+     }
+     input, form > textarea{
+        font-size: 16px;
+        border-radius: 5px;
+        margin: 6px 12px 21px 12px;
+        padding: 14px 0;
+        padding-left: 12px;
+     }
+     #perro > img {
+        width: 100%;
+     }
+}
+@media(max-width:768px){
+    #perro{
+        display: none;
+    }
+    .formulario{
+        border-radius: 0px;
+        width: 100%;
+        padding: 29px 0px;
+    }
+    .contenedorform{
+        padding: 0px;
+        gap: 0px;
+     }   
+     h2{
+        font-size: 20px;
+     }
+     form > label{
+        font-size: 16px;
+        margin: 0px 12px;
+     }
+     input, form > textarea{
+        font-size: 14px;
+        margin: 8px 12px 21px 12px;
+        padding: 16px 0;
+        padding-left: 12px;
+     }
+}

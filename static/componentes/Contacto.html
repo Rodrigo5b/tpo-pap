@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../estilos/header.css">
+        <link rel="stylesheet" href="../estilos/footer.css">
+        <link rel="stylesheet" href="../estilos/Contacto.css">
+        <link rel="shortcut icon" href="../img/logo-n.svg" type="image/x-icon">
+        <title>Par en Par | Contacto</title>
+    </head>
+    <body class="cuerpo">
+        <header class="cabecera">
+            <img class="logo-responsive" src="../img/svg/LogoParEnPar.svg" alt="Logo cabecera">
+            <div class="bar-menu">
+                <span class="line1"></span>
+                <span class="line2"></span>
+                <span class="line3"></span>
+            </div>
+            <div id="caja-boton">
+                <div class="div-boton">
+                    <img class="sol" width="30px" src="../img/svg/sun.svg" alt="Tematica Clara">
+                    <img class="luna" width="30px" src="../img/svg/moon.png" alt="Tematica Oscura">
+                </div>
+            </div>
+        </header>
+        <ul class="nav nav-responsive" id="nav">
+            <li class="li">
+                <a class="link" href="../index.html">Inicio</a>
+            </li>
+            <li class="li">
+                <a class="link" href="../componentes/Servicios.html">Servicios</a>
+            </li>
+            <li class="li">
+                <a class="link" href="../componentes/productos.html">Productos</a>
+            </li>
+            <li class="li">
+                <a class="link" href="../componentes/Contacto.html">Contacto</a>
+            </li>
+        </ul>
+
+        <main class="contenido">
+            <h1 class="contenido-titulo">Contacto</h1>
+            
+            <section class="contenedorform">
+                <div id="perro">
+                    <img src="../img/contacto/perrito.png" alt="foto de un perro pequeño">
+                </div>
+                <form class="formulario" id="form" action="https://formsubmit.co/parenpartpo@gmail.com" method="POST">
+                    <h2>Formulario de contacto</h2>
+
+                    <label for="nombre"> Nombre: </label>
+                    <input type="text" name="Nombre" id="nombre" maxlength="100" placeholder="Aquí coloque su nombre" >
+
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="E-mail" id="email" maxlength="100" placeholder="Aquí coloque su e-mail" >
+
+                    <label for="number">Número de teléfono: </label>
+                    <input type="tel" name="Numero de teléfono" id ="number" maxlength="50" placeholder="Aquí coloque su número de teléfono" >
+
+
+                    <label for="asunto">Asunto:</label>
+                    <input type="text" name="Asunto" id="asunto" maxlength="100" placeholder="Aquí escriba su asunto" >
+
+
+                    <label for="mensaje">Mensaje: </label>
+                    <textarea name="Mensaje" id="mensaje" rows="10" cols="40" placeholder="Escribe tu mensaje..."></textarea>
+
+                    <input type="submit" value="Enviar">
+                    <p class="warnings" id="warnings"></p>
+
+                    <input type="hidden" name="_next" value="https://rodrigo5b.github.io/TPO-ParenPar/componentes/Contacto.html">
+                    <input type="hidden" name="_captcha" value="false">
+
+                </form>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <a href="#" class="link-footer">
+                <img class="logo-b" src="../img/svg/logo-blanco.svg" alt="">
+            </a>
+            <div class="footer-div">
+                <img class="img-seguridad" src="../img/svg/Vector.svg" alt="Imagen de seguridad">
+                <div class="footer-div-textos">
+                    <b>~Dales también tu amor incondicional~</b>
+                    <b>parenpartpo@gmail.com</b>
+                    <b>@Copyright 2023 - Par en Par</b>
+                </div>
+                <img class="img-seguridad" src="../img/svg/Vector.svg" alt="Imagen de seguridad">
+            </div>
+        </footer>
+        <script src="../js/menu.js"></script>
+        <script src="../js/boton-tematico.js"></script>
+        <script src="../js/formulario.js"></script>
+    </body>
+</html>

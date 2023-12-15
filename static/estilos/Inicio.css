@@ -1,0 +1,153 @@
+@import url(../estilos/root.css);
+
+/*Contenido de la pagina*/
+body{
+    background: var(--background-primario);
+}
+
+h1{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--background-secundario);
+    font-size: 2.3rem;
+    color:#ffffff;
+    height: 4rem;
+}
+
+.primera-seccion{
+    display:flex;
+    justify-content: space-between;
+    padding: 86px 150px;
+    gap:170px;
+    font-size: 24px;
+    text-align: center;
+    align-items: center;
+}
+.divmayor{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #1E1E1E;
+}
+.divhijo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ p {
+    color:#1E1E1E;
+}
+.segunda-seccion{
+    display: flex;
+    justify-content: space-between;
+    padding: 70px 150px;
+    font-size: 24px;
+    text-align: center;
+    gap: 170px;
+    align-items: center;
+}
+
+.corazon{
+    height: fit-content;
+    max-width: 60px;
+    width: 100%;
+}
+.tercera-seccion{
+    display: flex;
+    justify-content: space-between;
+    padding: 70px 150px;
+    font-size: 24px;
+    text-align: center;
+    gap: 170px;
+    align-items: center;
+}
+
+.ultimop{
+    text-align: center;
+    font-size: 24px;
+
+}
+h3{
+    color: #000000;
+    text-align: center;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+
+.bg-alter p {
+    color:#ffffff;
+}
+.bg-alter > .contenido > h3 {
+    color:#ffffff;
+    background:var(--background-alter);
+}
+
+.bg-alter > .contenido > .ultimop {
+    color:#ffffff;
+}
+
+@media(max-width:1280px){
+    .primera-seccion{
+        gap: 95px;
+        padding: 40px 96px;
+    }
+    .segunda-seccion{
+        padding: 40px 96px;
+        gap: 43px;
+    }
+    .tercera-seccion{
+        padding: 95px 96px;
+        gap: 45px;
+    }
+    .ultimop{
+        padding: 50px 122px 40px 122px;
+    }
+    p{
+        font-size: 20px;
+    }
+    h3{
+        font-size: 28px;
+    }
+    .corazon {
+        max-width: 50px;
+    }
+}
+@media(max-width:768px){
+    .primera-seccion{
+        flex-direction: column;
+        gap: 15px;
+        padding: 40px 50px;
+    }
+    .segunda-seccion{
+        flex-direction: column;
+        padding: 40px 60px;
+        gap: 43px;
+    }
+    .tercera-seccion{
+        flex-direction: column;
+        padding: 40px 20px;
+        gap: 8px;
+    }
+    .ultimodiv{
+        padding: 50px 50px 40px 50px;
+    }
+    p, .ultimop{
+        padding: 0;
+        font-size: 16px;
+    }
+    h3{
+        font-size: 20px;
+    }
+    section > div > img {
+        min-width: 60px;
+        width: 100%;
+    }
+    .corazon {
+        min-width: 20px;
+        width: 100%;
+        height: fit-content;
+    }
+}

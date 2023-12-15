@@ -1,0 +1,231 @@
+.cuerpo{
+    /* max-width: 1440px; */
+    margin: auto;
+}
+.cabecera{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 25px;
+    background: var(--background-naranja);
+}
+.div-buscador{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    width: fit-content;
+    height: 30px;
+}
+.buscador{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    border-radius: 25px;
+    padding: 7px 17px;
+    border: none;
+    background: rgba(0, 0, 0, 0.40);
+}
+.buscador::placeholder{
+    color: #FFE6DB;
+}
+.logo-responsive{
+    display: none;
+}
+.lupa-responsive{
+    display: none;
+    cursor: pointer;
+}
+.bar-menu{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.bar-menu span{
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--background-bar);
+    margin-top: 6px;
+    transform-origin: 0px 100%;
+}
+.line1-active{ transform: rotate(45deg) translate(-2px,1px); }
+.line2-active{ opacity: 0; }
+.line3-active{ transform: rotate(-45deg) translate(-2px, 2px); }
+/* Boton tema -------------------------------------------------------------------------------*/
+#caja-boton{
+    width: 60px;
+    height: 30px;
+    background: none;
+    cursor: pointer;
+    border-radius: 50px;
+    border: 1px solid var(--color-primario);
+}
+.div-boton{
+    position: absolute;
+}
+.activar .div-boton{
+    transform: translate(30px);
+}
+.luna{ display: none; }
+.activar > .div-boton > .sol{ display: none; }
+.activar > .div-boton > .luna{ display: block; }
+.bg-alter, .bg-alter .nav-activo{background: var(--background-alter2);}
+.bg-alter .cabecera, .bg-alter .contenido-titulo, .bg-alter .footer {background: var(--background-alter);}
+/* Barra de navegación -------------------------------------------------------------------------*/
+.nav{
+    height: fit-content;
+    width: 100%;
+    background: var(--background-secundario);
+    position: absolute;
+    display: none;
+}
+.nav-activo{
+    display: block;
+    text-align: center;
+}
+
+.li{
+    padding: 3rem 0;
+}
+.link{
+    cursor: pointer;
+}
+/* titulo */
+h1{
+    padding: 11px 0;
+    background: var(--background-secundario);
+    font-size: 22px;
+    font-weight: normal;
+    text-align: center;
+}
+@media (min-width:768px) {
+    /* Header ----------------------------- */
+    .cabecera{
+        padding: 30px 56px;
+    }
+    .bar-menu{
+        display: none;
+    }
+    .logo-responsive{
+        display: block;
+        width: 120px;
+        height: 40px;
+    }
+    .div-buscador{
+        height: 60px;
+        width: 300px;
+        background: none;
+        flex: .7;
+    }
+    .buscador{
+        background: rgba(0, 0, 0, 0.40);
+        border-radius: 60px;
+        text-align: center;
+        padding: 18px 47px;
+        font-size: 20px;
+    }
+    .buscador::placeholder{
+        font-size: 20px;
+    }
+    .lupa-responsive{
+        display: block;
+        margin-left: 10px;
+    }
+    #caja-boton{
+        width: 80px;
+        height: 40px;
+    }
+    .sol, .luna{
+        width: 40px;
+    }
+    .activar .div-boton{
+        transform: translate(40px);
+    }
+    .bg-alter .link{ background: var(--background-alter);}
+    /* Nav responsive  ---------------*/
+    .nav-responsive{
+        display: flex;
+        height: 80px;
+        padding: 0 0px;
+        background: none;
+        border: none;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+    .link{
+        background: var(--background-naranja);
+        padding: 8px 29px;
+        border: none;
+        border-radius: 32px;
+    }
+    .link{
+        font-size: 20px;
+    }
+    .li:hover{
+        transform: scale(1.1);
+        font-weight: bold;
+    }
+    h1{
+        margin-top: 80px;
+        font-size: 28px;
+        padding: 13px 0;
+        font-weight: bold;
+    }
+}
+@media (min-width:1280px) {
+    /* Cabecera --------------------------------------------- */
+    .logo-responsive {
+        width: 190px;
+        height: 50px;
+    }
+    .cabecera{
+        padding: 60px 163px;
+    }
+    .div-buscador{
+        height: 80px;
+        flex: none;
+        width: auto;
+    }
+    .buscador{
+        padding: 27px 108px;
+        font-size: 22px;
+        max-width: 482px;
+    }
+    .buscador::placeholder{
+        font-size: 22px;
+    }
+    .lupa-responsive{
+        width: 60px;
+    }
+    #caja-boton{
+        width: 120px;
+        height: 60px;
+    }
+    .sol, .luna{
+        width: 60px;
+    }
+    .activar .div-boton{
+        transform: translate(60px);
+    }
+    /* Nav responsive  ---------------*/
+    .nav-responsive{
+        height: 120px;
+        justify-content: space-evenly;
+        /* max-width: 1440px; */
+    }
+    .link{
+        padding: 15px 51px;
+        border-radius: 32px;
+    }
+    .link{
+        font-size: 22px;
+    }
+    h1{
+        margin-top: 120px;
+        font-size: 42px;
+        padding: 20px 0;
+    }
+}

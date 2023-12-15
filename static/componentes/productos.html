@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Par en Par | Productos</title>
+        <link rel="stylesheet" href="../estilos/productos.css">
+        <link rel="stylesheet" href="../estilos/header.css">
+        <link rel="stylesheet" href="../estilos/footer.css">
+        <link rel="shortcut icon" href="../img/logo-n.svg" type="x-icon">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    </head>
+<body class="cuerpo" id="cuerpo">
+    <header class="cabecera">
+        <img class="logo-responsive" src="../img/svg/LogoParEnPar.svg" alt="Logo cabecera">
+        <div class="bar-menu">
+            <span class="line1"></span>
+            <span class="line2"></span>
+            <span class="line3"></span>
+        </div>
+        <div class="div-buscador">
+            <input class="buscador" type="text" placeholder="Busca alimentos o marcas...">
+            <img width="40px" class="lupa-responsive" src="../img/svg/Lupalupa.svg" alt="Lupa">
+        </div>
+        <div id="caja-boton">
+            <div class="div-boton">
+                <img class="sol" width="30px" src="../img/svg/sun.svg" alt="Tematica Clara">
+                <img class="luna" width="30px" src="../img/svg/moon.png" alt="Tematica Oscura">
+            </div>
+        </div>
+    </header>
+    <ul class="nav nav-responsive" id="nav">
+        <li class="li">
+            <a class="link" href="../index.html">Inicio</a>
+        </li>
+        <li class="li">
+            <a class="link" href="../componentes/Servicios.html">Servicios</a>
+        </li>
+        <li class="li">
+            <a class="link" href="#">Productos</a>
+        </li>
+        <li class="li">
+            <a class="link" href="../componentes/Contacto.html">Contacto</a>
+        </li>
+    </ul>
+
+    <main class="contenido">
+        <h1 class="contenido-titulo">Productos</h1>
+        <div class="div-categorias">
+            <h3>Perros</h2>
+            <h5>Ver más</h4>
+        </div>
+        <div id="app" >
+            <div v-if="error">
+                <p>Lo sentimos: Hay un error</p>
+            </div>
+            <div v-else>
+                <section v-if="cargando">
+                    <p>Cargando ... espere</p>
+                </section>
+                <section class="carrousel-cartas" v-else >
+                    <div class="carta" v-for="producto in productos">
+                        <div class="carta-img">
+                            <img class="img-productos" :src="producto.imagen" :alt="producto.nombre">
+                        </div>
+                        <p>{{producto.nombre}}</p>
+                        <b>${{producto.precio}}</b>
+                        <div class="buy-button">Comprar</div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- <div class="cart-container">
+                <div class="cart">
+                    <h2><i class='bx bx-cart-download'></i> Carrito de Compras </h2>
+                    <ul id="items-creados"> 
+                        
+                    Los elementos del carrito se agregarán aquí dinámicamente
+                    </ul>
+                </div>
+                <div id="cart-summary">
+                  <p>Total: $<span id="cart-total">0</span></p>
+                  <p>Cantidad de productos: <span id="cart-quantity">0</span></p>
+                </div>
+                <form id="checkout-form">
+                  <input type="email" id="email-input" placeholder="Ingrese su correo electrónico" required>
+                  <button type="submit">Finalizar Compra</button>
+                </form>
+            </div> -->
+        </div>
+        
+        <!-- <div class="grupo-cards">
+            <div class="card">
+                <div class="description">Lentes de sol Siracuza</div>
+                <div class="price">$105.000</div>
+                <div class="buy-button">Comprar</div>
+            </div>
+        </div> -->
+
+
+    </main>
+    <footer class="footer">
+        <a href="#" class="link-footer">
+            <img class="logo-b" src="../img/svg/logo-blanco.svg" alt="">
+        </a>
+        <div class="footer-div">
+            <img class="img-seguridad" src="../img/svg/Vector.svg" alt="Imagen de seguridad">
+            <div class="footer-div-textos">
+                <b>~Dales también tu amor incondicional~</b>
+                <b>parenpartpo@gmail.com</b>
+                <b>@Copyright 2023 - Par en Par</b>
+            </div>
+            <img class="img-seguridad" src="../img/svg/Vector.svg" alt="Imagen de seguridad">
+        </div>
+    </footer>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><!--Link de VUE-->
+    <script src="./../../js/productos.js"></script>
+    <script src="../js/menu.js"></script>
+    <script src="../js/boton-tematico.js"></script>
+    <script src="../js/carrito.js"></script>
+</body>
+</html>
